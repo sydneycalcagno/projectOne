@@ -1,0 +1,17 @@
+.center{
+    width: 50%;
+    margin: 150px auto 0; 
+    text-align: center;
+}
+#rovers, #search-btn{
+    padding: 5px; 
+    font-size: medium;
+}
+body{
+    /* background-image: url('../img/sky.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background-color: black;
+    color: white; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
