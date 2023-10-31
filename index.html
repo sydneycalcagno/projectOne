@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="center">
+        <div class="home-page">
+            <h1 id="home-title">Photo's Taken By Rovers!</h1>
+            <h3 id="choose-title">Choose a rover to get started</h3>
+
+            <div id="select-and-search">
+                <select id="rovers">
+                    <option id="o1" value="curiosity" >Curiosity</option>
+                    <option id="o2" value="opportunity" >Opportunity</option>
+                    <option id="o3" value="spirit">Spirit</option>
+                </select>
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+        
+        <div class="rover-page">
+            <h1 id="rover-title"></h1>
+            <div id="photo-container"></div>
+            <button id="home">Home</button>
+            <button id="regenerate-rover">fill</button>
+        </div>
+        
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

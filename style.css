@@ -1,6 +1,15 @@
 .center{
     width: 50%;
-    margin: 150px auto 0; 
+    margin: 150px auto 150px; 
+    text-align: center;
+}
+/* .home-page{
+    text-align: center;
+    margin: 150px auto 150px; 
+    width: 50%;
+} */
+.rover-page{
+    margin-top: -80px;
     text-align: center;
 }
 #rovers, #search-btn{
@@ -14,4 +23,8 @@ body{
     background-color: black;
     color: white; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+#photo-container img{
+    width: 70%;
+    height: auto;
 }
