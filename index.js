@@ -8,9 +8,6 @@ document.addEventListener("DOMContentLoaded", function () { //content is loaded
     const homeBtn = document.getElementById("home");
     const regen = document.getElementById("regenerate-rover");
 
-    let go = false;
-    let first = false;
-
     let c = roverSelect.options[roverSelect.selectedIndex].text;
     let roverName = c.toLowerCase();
 
@@ -31,11 +28,8 @@ document.addEventListener("DOMContentLoaded", function () { //content is loaded
         homeTitle.style.display = "none";
         roverTitle.style.display = "block";
         photoContainer.style.display = "block";
-        if(go){
-            regen.style.display = "inline";
-            homeBtn.style.display = "inline";
-        }
-        
+
+
         const apiUrl = "https://api.nasa.gov/mars-photos/api/v1/rovers/" + roverName + "/photos?sol=1000&api_key=PttGw68Ydp1RFPxnmEsh9xuBRL4CZpigEHORKrjN";
         console.log(roverName);
 
@@ -50,8 +44,6 @@ document.addEventListener("DOMContentLoaded", function () { //content is loaded
             homeTitle.style.display = "none";
             roverTitle.style.display = "block";
             photoContainer.style.display = "block";
-            regen.style.display = "inline";
-            homeBtn.style.display = "inline";
 
             fetch(apiUrl, {
             headers: {
@@ -70,7 +62,9 @@ document.addEventListener("DOMContentLoaded", function () { //content is loaded
                 console.log(num);
                 let picUrl = data.photos[num].img_src;
                 photo.innerHTML = "<img src='" + picUrl + "'>";
-                go = true;
+                regen.style.display = "inline";
+                homeBtn.style.display = "inline";
+
                 console.log(data);
             })
             .catch(error => console.log("Uh Oh!"));
@@ -94,8 +88,9 @@ document.addEventListener("DOMContentLoaded", function () { //content is loaded
             console.log(num);
             let picUrl = data.photos[num].img_src;
             photo.innerHTML = "<img src='" + picUrl + "'>";
-            go = true;
-            first = false;
+            regen.style.display = "inline";
+            homeBtn.style.display = "inline";
+  
             console.log(data);
         })
         .catch(error => console.log("Uh Oh!"));
