@@ -24,6 +24,12 @@ body{
     color: white; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+button:hover{
+   background-color: lightgrey;
+}
+button:active{
+    background-color: lightslategray;
+}
 #photo-container img{
     width: 70%;
     height: auto;
