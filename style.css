@@ -3,11 +3,6 @@
     margin: 150px auto 150px; 
     text-align: center;
 }
-/* .home-page{
-    text-align: center;
-    margin: 150px auto 150px; 
-    width: 50%;
-} */
 .rover-page{
     margin-top: -80px;
     text-align: center;
@@ -24,11 +19,23 @@ body{
     color: white; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+#date-taken{
+    margin-bottom: 15px;
+}
+#home, #regenerate-rover{
+    padding: 5px; 
+    font-size: medium;
+    margin-top: 15px;
+}
 button:hover{
    background-color: lightgrey;
+   padding: 5px; 
+   font-size: medium;
 }
 button:active{
     background-color: lightslategray;
+    padding: 5px; 
+    font-size: medium;
 }
 #photo-container img{
     width: 70%;

@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () { //content is loaded
     const photoContainer = document.getElementById("photo-container");
     const homeBtn = document.getElementById("home");
     const regen = document.getElementById("regenerate-rover");
+    let datePic = document.getElementById("date-taken");
+    let picUrl;
+    let dateApi;
+    let num;
 
     let c = roverSelect.options[roverSelect.selectedIndex].text;
     let roverName = c.toLowerCase();
@@ -52,18 +56,24 @@ document.addEventListener("DOMContentLoaded", function () { //content is loaded
             })
             .then(res => res.json())
             .then(data => {
-                let photo = document.getElementById("photo-container");
+                
                 //if curiosity array 0-855 something else 0-5
-                let num = Math.floor((Math.random() * 5) + 0);
+                num = Math.floor((Math.random() * 5) + 0);
                 if(roverName == 'curiosity'){
                     num = Math.floor((Math.random() * 855) + 0);
                 }
                 
+                
+                picUrl = data.photos[num].img_src;
+                dateApi = data.photos[num].earth_date;
+
                 console.log(num);
-                let picUrl = data.photos[num].img_src;
-                photo.innerHTML = "<img src='" + picUrl + "'>";
+                console.log(dateApi);
+                photoContainer.innerHTML = "<img src='" + picUrl + "'>";
                 regen.style.display = "inline";
                 homeBtn.style.display = "inline";
+                
+                datePic.innerHTML = "Date Taken: " + dateApi;
 
                 console.log(data);
             })
@@ -78,16 +88,17 @@ document.addEventListener("DOMContentLoaded", function () { //content is loaded
         })
         .then(res => res.json())
         .then(data => {
-            let photo = document.getElementById("photo-container");
             //if curiosity array 0-855 something else 0-5
-            let num = Math.floor((Math.random() * 5) + 0);
+            num = Math.floor((Math.random() * 5) + 0);
             if(roverName == 'curiosity'){
                 num = Math.floor((Math.random() * 855) + 0);
             }
             
             console.log(num);
-            let picUrl = data.photos[num].img_src;
-            photo.innerHTML = "<img src='" + picUrl + "'>";
+            picUrl = data.photos[num].img_src;
+            dateApi = data.photos[num].earth_date;
+            photoContainer.innerHTML = "<img src='" + picUrl + "'>";
+            datePic.innerHTML = "Date Taken: " + dateApi;
             regen.style.display = "inline";
             homeBtn.style.display = "inline";
   
