@@ -12,9 +12,9 @@
     font-size: medium;
 }
 body{
-    /* background-image: url('../img/sky.jpg');
-    background-size: cover;
-    background-repeat: no-repeat; */
+    background-image:url('https://i.gifer.com/Ir4.gif'); 
+    background-repeat:repeat;
+
     background-color: black;
     color: white; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
@@ -41,3 +41,7 @@ button:active{
     width: 70%;
     height: auto;
 }
+
+/* #photo-container{
+    background-image:url('https://i.gifer.com/WuRm.gif'); 
+} */
