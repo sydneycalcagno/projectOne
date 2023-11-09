@@ -7,14 +7,17 @@
     margin-top: -80px;
     text-align: center;
 }
+#search-btn{
+    margin-left: 10px;
+}
 #rovers, #search-btn{
     padding: 5px; 
     font-size: medium;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 body{
     background-image:url('https://i.gifer.com/Ir4.gif'); 
     background-repeat:repeat;
-
     background-color: black;
     color: white; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
@@ -22,20 +25,22 @@ body{
 #date-taken{
     margin-bottom: 15px;
 }
+#home{
+    margin-right: 10px;
+}
 #home, #regenerate-rover{
     padding: 5px; 
     font-size: medium;
     margin-top: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 button:hover{
    background-color: lightgrey;
-   padding: 5px; 
-   font-size: medium;
+   box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 button:active{
     background-color: lightslategray;
-    padding: 5px; 
-    font-size: medium;
+    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 #photo-container img{
     width: 70%;
